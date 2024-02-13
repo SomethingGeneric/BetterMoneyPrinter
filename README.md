@@ -2,10 +2,6 @@
 
 Automate the creation of YouTube Shorts locally, simply by providing a video topic to talk about.
 
-> **Important** Please make sure you look through existing/closed issues before opening your own. If it's just a question, please join our [discord](https://dsc.gg/fuji-community) and ask there.
-
-> **🎥** Watch the video on [YouTube](https://youtu.be/mkZsaDA2JnA?si=pNne3MnluRVkWQbE).
-
 ## Installation 📥
 
 `MoneyPrinter` requires Python 3.11 to run effectively. If you don't have Python installed, you can download it from [here](https://www.python.org/downloads/).
@@ -107,18 +103,13 @@ pip install -U wheel
 pip install -U playsound
 ```
 
-## Donate 🎁
-
-If you like and enjoy `MoneyPrinter`, and would like to donate, you can do that by clicking on the button on the right hand side of the repository. ❤️
-You will have your name (and/or logo) added to this repository as a supporter as a sign of appreciation.
-
 ## Contributing 🤝
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Star History 🌟
 
-[![Star History Chart](https://api.star-history.com/svg?repos=FujiwaraChoki/MoneyPrinter&type=Date)](https://star-history.com/#FujiwaraChoki/MoneyPrinter&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=SomethingGeneric/BetterMoneyPrinter&type=Date)](https://star-history.com/#SomethingGeneric/BetterMoneyPrinter&Date)
 
 ## License 📝
 
