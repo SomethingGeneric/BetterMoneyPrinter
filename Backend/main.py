@@ -1,4 +1,4 @@
-import os
+import os, shutil
 from utils import *
 from dotenv import load_dotenv
 
@@ -25,7 +25,17 @@ from moviepy.config import change_settings
 # Set environment variables
 SESSION_ID = os.getenv("TIKTOK_SESSION_ID")
 openai_api_key = os.getenv('OPENAI_API_KEY')
-change_settings({"IMAGEMAGICK_BINARY": os.getenv("IMAGEMAGICK_BINARY")})
+
+img = shutil.which("magick")
+
+if img is None:
+    img = os.getenv("IMAGEMAGICK_BINARY")
+
+if img is None:
+    print(colored("[!] ImageMagick not found. Please install ImageMagick and set the IMAGEMAGICK_BINARY environment variable.", "red"))
+    exit(1)
+
+change_settings({"IMAGEMAGICK_BINARY": img})
 
 # Initialize Flask
 app = Flask(__name__)

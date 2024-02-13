@@ -6,6 +6,7 @@ from typing import Tuple, List
 from termcolor import colored
 from dotenv import load_dotenv
 import os
+import requests
 import google.generativeai as genai
 
 # Load environment variables
@@ -16,7 +17,7 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 openai.api_key = OPENAI_API_KEY
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=GOOGLE_API_KEY)
-
+OLLAMA_ENDPOINT = os.getenv("OLLAMA_ENDPOINT")
 
 def generate_response(prompt: str, ai_model: str) -> str:
     """
@@ -58,6 +59,21 @@ def generate_response(prompt: str, ai_model: str) -> str:
         model = genai.GenerativeModel('gemini-pro')
         response_model = model.generate_content(prompt)
         response = response_model.text
+
+    elif ai_model in ['llama2', 'llama2-uncensored']:
+        url = OLLAMA_ENDPOINT
+        data = {
+            "model": ai_model,
+            "prompt": prompt,
+            "stream": False,
+            "format": "json" 
+        }
+        response = requests.post(url, json=data)
+        try:
+            response = response.json()['response']
+        except:
+            response = response.text
+            print(colored(f"[-] Error: {response}", "red"))
 
     else:
 
