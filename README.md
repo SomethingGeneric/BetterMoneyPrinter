@@ -1,15 +1,15 @@
-# MoneyPrinter 💸
+# BetterMoneyPrinter
 
 Automate the creation of YouTube Shorts locally, simply by providing a video topic to talk about.
 
-## Installation 📥
+## Installation
 
-`MoneyPrinter` requires Python 3.11 to run effectively. If you don't have Python installed, you can download it from [here](https://www.python.org/downloads/).
+MoneyPrinter requires Python 3.11 to run effectively. If you don't have Python installed, you can download it from [here](https://www.python.org/downloads/).
 
 After you finished installing Python, you can install `MoneyPrinter` by following the steps below:
 
 ```bash
-git clone https://github.com/FujiwaraChoki/MoneyPrinter.git
+git clone https://github.com/SomethingGeneric/BetterMoneyPrinter.git
 cd MoneyPrinter
 
 # Install requirements
@@ -40,7 +40,7 @@ If you need help, open [EnvironmentVariables.md](EnvironmentVariables.md) for mo
 1. Wait for the video to be generated
 1. The video's location is `MoneyPrinter/output.mp4`
 
-## Music 🎵
+## Music
 
 To use your own music, compress all your MP3 Files into a ZIP file and upload it somewhere. Provide the link to the ZIP file in the Frontend.
 
@@ -48,11 +48,11 @@ It is recommended to use Services such as [Filebin](https://filebin.net) to uplo
 
 You can also just move your MP3 files into the `Songs` folder. 
 
-## Fonts 🅰
+## Fonts
 
 Add your fonts to the `fonts/` folder, and load them by specifying the font name on line `124` in `Backend/video.py`.
 
-## Automatic YouTube Uploading 🎥
+## Automatic YouTube Uploading
 
 MoneyPrinter now includes functionality to automatically upload generated videos to YouTube.
 
@@ -78,7 +78,7 @@ Videos are uploaded as private by default. For a completely automated workflow, 
 
 For videos that have been locked as private due to upload via an unverified API service, you will not be able to appeal. You’ll need to re-upload the video via a verified API service or via the YouTube app/site. The unverified API service can also apply for an API audit. So make sure to verify your API, see [OAuth App Verification Help Center](https://support.google.com/cloud/answer/13463073) for more information.
 
-## FAQ 🤔
+## FAQ
 
 ### How do I get the TikTok session ID?
 
@@ -103,14 +103,14 @@ pip install -U wheel
 pip install -U playsound
 ```
 
-## Contributing 🤝
+## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Star History 🌟
+## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=SomethingGeneric/BetterMoneyPrinter&type=Date)](https://star-history.com/#SomethingGeneric/BetterMoneyPrinter&Date)
 
-## License 📝
+## License
 
 See [`LICENSE`](LICENSE) file for more information.
